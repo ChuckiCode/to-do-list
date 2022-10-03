@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    color: rgb(11, 137, 255);
+}
+h2{
+    color: rgb(134, 182, 255);
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+}
+
+h3{
+    font-size: 16px;
+    font-family: 'Yellowtail', cursive;
+}
+.error{
+    color: red;
+}
+
+h4{
+    font-family: 'Indie Flower', cursive;
+}
+
+label{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.helpWindow{
+    text-align: center;
+    display: none;
+    animation-name: pop;
+    animation-duration: 800ms;
+    position: absolute;
+}
+
+@keyframes pop {
+    0%{
+        opacity: 0;
+    }    
+    100%{
+        opacity: 1;
+    }    
+}
+
+.helpWindow h2{
+    margin: 10px 0;
+    color: gray;
+}
+
+.helpWindow p{
+     margin: 0 16px;
+     text-align: center;
+}
+
+.helpWindow button{
+    width: 120px;
+    height: 45px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(4, 105, 255);
+    color: white;
+}
+.help_button button:hover{
+    transition-duration: 800ms;
+    background-color: rgb(0, 60, 133);
+    color: white;
+}
+
+
+/* Not completed container tasks  */
+.taskContainer{
+    width: 90%;
+    height: 95px;
+    background-color: rgb(182, 211, 255);
+    box-shadow: 0 0 1px 0 black;
+    border-radius: 6px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+.taskContainer_complete{
+    width: 90%;
+    height: 95px;
+    background-color: rgb(213, 213, 213);
+    box-shadow: 0 0 1px 0 black;
+    border-radius: 6px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    color: rgb(121, 121, 121);
+}
+.taskContainer:hover,
+.taskContainer_complete:hover{
+    transition-duration: 500ms;
+    box-shadow: 0 0 10px 0 black;
+}
+.taskNameContainer{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 10px;
+}
+.buttonsBox{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.checkBtn , .delBtn{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    display: inherit;
+    align-items: inherit;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+}
+
+.checkBtn:hover{
+    transition-duration: 500ms;
+    background-color: rgb(0, 197, 0);
+    color: rgb(255, 246, 195);
+} 
+
+.delBtn:hover{
+    transition-duration: 500ms;
+    background-color: red;
+}
+.timeContainer_end{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 10px;
+    color: rgb(154, 154, 154);
+    font-weight: bold;
+}
+
+.timeContainer_start{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 10px;
+    color: rgb(122, 122, 122);
+}
+
+
+/* Completed container with tasks  */
+.taskNameContainer_complete{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 10px;
+}
+.buttonsBox_complete{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right:10px ;
+}
+.checkBtn_complete{
+    width: 60px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    display: inherit;
+    align-items: inherit;
+    justify-content: center;
+}
+.timeContainer_end_complete{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+.timeContainer_start_complete{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 10px;
+}
+.checkBtn_disable{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    display: inherit;
+    align-items: inherit;
+    justify-content: center;
+    background-color: rgb(79, 79, 79);
+    opacity: 0.2;
+    margin: 5px;
+}

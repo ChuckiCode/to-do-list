@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>To-Do-List</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<!-- help window  -->
+    <div class="container-fluid helpWindow m-auto h-auto">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 m-auto pt-2">
+                 <h2>How this to-do-list works</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 m-auto pb-3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste saepe libero illo consequatur, velit non fuga ipsam fugiat distinctio ratione ullam repellat. Quos explicabo nobis architecto dolorem sunt officia doloremque!</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste saepe libero illo consequatur, velit non fuga ipsam fugiat distinctio ratione ullam repellat. Quos explicabo nobis architecto dolorem sunt officia doloremque!</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 m-auto pt-2">
+                <img src="media/undraw_virtual_assistant_jjo2.svg" class="img-fluid" width="200px" alt="" >
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-5">
+                <button id="closeBtn">Got it</button>
+            </div> 
+        </div>
+    </div>
+
+<div class="container-fluid" id="form_container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 m-auto pb-3 bg-light">
+            <div class="row text-center mt-2">
+                <h1>To-Do-List</h1>
+            </div>
+            <div class="row text-center m-2">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure commodi consectetur hic nobis recusandae sint dolor, rem incidunt aspernatur! Voluptates eos nesciunt expedita sit voluptas provident architecto ab qui ullam!</p>
+            </div>
+            <div class="row d-flex align-items-center justify-content-center">
+                <button type="button" name="helpBtn" id="helpBtn" class="btn btn-primary w-50 m-auto" btn-lg btn-block>Help</button>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 m-auto pb-3 mt-5">
+                <div class="form-group">
+                  <label for="to_do_txt">Task :</label>
+                  <input type="text" class="form-control" name="to_do_txt" id="to_do_txt" aria-describedby="helpId" placeholder="Example: Office meeting" required>
+                  <small id="toDoSmallHelp" class="form-text text-muted">What do you need to do?</small>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label for="expireTime">Expire :</label>
+                  <input type="date" class="form-control" name="expireTime" id="expireTime" aria-describedby="expireTimehelpId" placeholder="" required>
+                  <small id="toDoSmallHelp_date" class="form-text text-muted">When should this task expire?</small>
+                </div>
+
+                <div class="form-check mt-3">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="notifiMe" id="notifiMe">
+                    Notify me
+                  </label>
+                </div>  
+
+                <button type="submit" class="btn btn-primary mt-3" id="btn">Add Task</button>
+        </div>
+
+    </div>
+</div>
+
+<div class="container-fluid mt-5" id="task_container">
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 m-auto">
+            <div class="row mt-3 mb-2 text-center">
+                <h2>To Do tasks</h2>
+            </div>
+            <div class="row">
+                <div id="newTaskBolck" class="col-xs-1-12 overflow-auto p-3" style="height: 260px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 m-auto">
+            <div class="row mt-3 mb-2 text-center">
+                <h2>Completed Tasks</h2>
+            </div>
+            <div class="row">
+                <div id="completBlock" class="col-xs-1-12 overflow-auto p-3" style="height: 260px;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>     
+    <script src="JS/app.js"></script>
+</body>
+</html>
